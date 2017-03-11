@@ -48,7 +48,7 @@ function sumAndMultiply(a,b,c){
   var uh = multiply(a,b);
   var uh2 = multiply(uh[0],c);
   var message2 = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + uh2[0] + '.';
-  return[duh2[0], uh2[0], message, message2];
+  return[duh2[0], uh2, message, message2];
 }
 
 testSumAndMultiply(4,7,5);
@@ -65,14 +65,20 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 var testArray = [2,3,4]; //eslint-disable-line
- var num1 = [a,b,c]
-function sumArray(testArray){ //eslint-disable-line
 
+function sumArray(testArray){ //eslint-disable-line
+  var a = testArray[0];
+  var b = testArray[1];
+  var c = testArray[2];
+  var add1 = sum(a,b);
+  var add2 = sum(add1[0],c);
+  var message = '' + testArray + ' was passed in as an array of numbers, and ' + add2[0] + ' is their sum.';
+  return [add2[0], message];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
