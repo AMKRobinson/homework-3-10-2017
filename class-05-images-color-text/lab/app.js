@@ -93,11 +93,22 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(testArray){ //eslint-disable-line
+function multiplyArray(testArray){
+  var testArray = [2,3,4];
+  var array1 = testArray[0];
+  return array1;
 
 }
 
-// Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(2,3,4);
+testMultiplyArray(2,3,4);
+
+// var arg = Array.from(arguments);
+// var a = arg[0];
+// var b = arg[1];
+// var c = arg[2];
+// var multi1 = multiply(a,b);
+// var multi2 = multiply(multi1[0],c);
+// var message = 'The numbers ' + arg + ' have a product of ' + multi2[0] + '.';
+// return arguments;
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
