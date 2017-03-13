@@ -94,13 +94,35 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(testArray){
-  var testArray = [2,3,4];
-  var array1 = testArray[0];
-  return array1;
-
+  var a = testArray[0];
+  var b = testArray[1];
+  var c = testArray[2];
+  testArray = [a,b,c];
+  var multi = multiply(a,b);
+  var multi2 = multiply(multi[0],c);
+  var message1 = 'The numbers ' + testArray + ' have a product of ' + multi2[0] + '.';
+  return [multi2[0], message1];
 }
 
-testMultiplyArray(2,3,4);
+// function multiplyArray(testArray) {
+//   var answer = multiply(testArray[0], testArray[1])[0];
+//   for (var i = 2; i < testArray.length; i++) {
+//     answer = multiply(answer, testArray[i])[0];
+//   }
+//   var message = 'The numbers ' + testArray + ' have a product of ' + answer + '.';
+//   return [answer, message];
+// }
+
+// function multiplyArray(testArray) {
+//   var multi = multiply(testArray[0], testArray[1]);
+//   var multi2 = multiply(multi[0], testArray[2]);
+//   var message = 'The numbers ' + testArray + ' have a product of ' + multi2[0] + '.';
+//   var answer = multi2[0];
+//   return [answer, message];
+// }
+
+// Removed arguments because the function signature doesn't define any arguments (in tests.js).
+testMultiplyArray();
 
 // var arg = Array.from(arguments);
 // var a = arg[0];
